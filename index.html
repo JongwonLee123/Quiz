@@ -5,24 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz Time!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6120f5dc0e.js" crossorigin="anonymous"></script>
+
 </head>
 <body>  
-    <header>
-        <ul>
-            <li>Highscores</li>
-            <li class="time"></li>
-        </ul>
-    </header>
-    <h1 class="start">Click to Start!</h1>
-    <h2 class="question"></h2>
-    <ul>
-        <li class="a"></li>
-        <li class="b"></li>
-        <li class="c"></li>
-        <li class="d"></li>
-    </ul>
-    <h3 class="result"></h3>
-    <h4 class="score"></h4>
-    <script src="./script.js"></script> 
+    <section class="start"><button>Start Quiz</button></section>
+    
+    <section class="information">
+        <div class="title">
+            <span>Some Rules of this Quiz</span>
+        </div>
+        <div class="list">
+            <div class="info">1. You have <span>10 seconds</span> for each question</div>
+            <div class="info">2. Can't reselect answers, so choose wisely</div>
+            <div class="info">3. When time is over, can't select any more options</div>
+            <div class="info">4. Can't leave the quiz while taking it</div>
+            <div class="info">5. Points are based on correct answers</div>
+        </div>
+        <section class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </section>
+    </section>
+
+    <section class="quiz">
+        <header>
+            <div class="title">JS HTML CSS Quiz</div>
+            <section class="timer">
+                <div class="left">Time Left</div>
+                <div class="seconds">10</div>
+            </section>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text"></div>
+            <div class="option_list"></div>
+        </section>
+
+        <footer>
+            <div class="total_que">
+                <span><p>2</p><p>of</p><p>5</p><p>Questions</p></span>
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </section>
+
+    <section class="result">
+        <div class="icon">
+            <i class="fa-solid fa-crown"></i>
+        </div>
+        <div class="complete">You finished the Quiz!</div>
+        <div class="score">
+            <span>and sorry, You got only <p>2</p> out of <p>5</p></span>
+        </div>
+        <section class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </section>
+    </section>
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
 </body>
 </html>
